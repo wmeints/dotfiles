@@ -34,7 +34,7 @@ yay -S --needed --noconfirm aspnet-runtime \
 {{- else if eq .chezmoi.osRelease.id "ubuntu" -}}
 
 # Install the base packages
-sudo apt update && apt install -y dotnet-sdk-7.0 \
+sudo apt update && sudo apt install -y dotnet-sdk-7.0 \
   zip \
   unzip \
   wget \
