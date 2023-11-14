@@ -2,9 +2,9 @@
 
 # Automatically create a backup of the current neovim configuration.
 # We keep only one copy of the configuration files backup.
-if [ -d "~/.config/nvim"]
-  rm -rf ~/.config/nvim.bak
-  mv ~/.config/nvim ~/.config/nvim.bak
+if [[ -d "$HOME/.config/nvim/" ]]; then
+  rm -rf $HOME/.config/nvim.bak
+  mv $HOME/.config/nvim ~/.config/nvim.bak
 fi
 
 # This clones the default files for astronvim to the configuration location.
