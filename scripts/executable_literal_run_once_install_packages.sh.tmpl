@@ -1,5 +1,7 @@
 #!/bin/bash
 
+{{ if eq .chezmoi.osRelease.id "arch" -}}
+
 # Install the basics
 sudo pacman -Syu --noconfirm
 sudo pacman -S --needed base-devel git --noconfirm
@@ -28,6 +30,23 @@ yay -S --needed --noconfirm aspnet-runtime \
   ripgrep \
   lazygit \
   bottom
+
+{{- else if eq .chezmoi.osRelease.id "ubuntu" -}}
+
+# Install the base packages
+sudo apt update && apt install -y dotnet-sdk-7.0 \
+  zip \
+  unzip \
+  wget \
+  ripgrep
+
+# Install homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# Install node version manager
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh
+
+{{- end -}}
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
