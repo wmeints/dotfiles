@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Install the basics
 sudo pacman -Syu --noconfirm
 sudo pacman -S --needed base-devel git --noconfirm
