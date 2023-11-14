@@ -5,7 +5,7 @@ sudo pacman -Syu --noconfirm
 sudo pacman -S --needed base-devel git --noconfirm
 
 # Install the yay tool for easier package management
-if [[ -d "$HOME/packages/yay"]]; then
+if [[ -d "$HOME/packages/yay" ]]; then
   rm -rf $HOME/packages/yay
 fi
 
