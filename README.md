@@ -26,3 +26,13 @@ and install the dotfiles.
 chezmoi init https://github.com/wmeints/dotfiles.git
 chezmoi apply
 ```
+
+## Included tools
+
+The following tools are included:
+
+* Node Version Manager (with node 18)
+* .NET 7.0 SDK
+* Neovim (latest version)
+* Lazygit (latest version)
+* Python (latest version)
