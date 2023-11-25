@@ -19,8 +19,9 @@ popd
 # Install the tools that I use on a daily basis
 yay -S --needed --noconfirm aspnet-runtime \
   azure-functions-core-tools-bin \
-  dotnet-runtime \
-  dotnet-sdk \
+  dotnet-runtime-bin \
+  dotnet-sdk-bin \
+  aspnet-runtime-bin \
   neovim \
   python \
   oh-my-posh-bin \
@@ -34,7 +35,7 @@ yay -S --needed --noconfirm aspnet-runtime \
 {{- else if eq .chezmoi.osRelease.id "ubuntu" -}}
 
 # Install the base packages
-sudo apt update && sudo apt install -y dotnet-sdk-7.0 \
+sudo apt update && sudo apt install -y dotnet-sdk-8.0 dotnet-runtime-8.0 aspnetcore-runtime-8.0 \
   zip \
   unzip \
   wget \
