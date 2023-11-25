@@ -56,6 +56,9 @@ brew install oh-my-posh
 # Update the font cache
 fc-cache -fv
 
+# Load the terminal preferences for the machine
+cat ~/.terminal.preferences | dconf load /org/gnome/terminal/legacy/profiles:/
+
 {{ end }}
 
 export NVM_DIR="$HOME/.nvm"
