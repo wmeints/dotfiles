@@ -89,8 +89,12 @@ window#waybar {
 #tray {
 }
 
-#pulseaudio,#tray,#memory,#cpu,#network, #custom-powermenu {
-    margin-right: 16px;
+#clock,#bluetooth,#pulseaudio,#tray,#memory,#cpu,#network, #custom-powermenu {
+    margin-right: 8px;
     margin-top: 8px;
     margin-bottom: 8px;
+}
+
+#custom-powermenu {
+    margin-right: 16px;
 }

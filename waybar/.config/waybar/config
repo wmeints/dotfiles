@@ -6,7 +6,7 @@
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces",  "custom/spotify", "hyprland/submap"],
     "modules-center": ["hyprland/window"],
-    "modules-right": ["pulseaudio", "network", "cpu", "memory", "battery", "tray", "clock", "custom/powermenu"],
+    "modules-right": ["pulseaudio", "cpu", "memory", "battery", "tray", "clock", "custom/powermenu"],
     "sway/workspaces": {
         "disable-scroll": true,
         "all-outputs": false,
@@ -48,9 +48,13 @@
         // "format-full": "",
         "format-icons": ["", "", "", "", ""]
     },
+    "bluetooth": {
+        "format": "",
+        "on-click": "blueman-manager"
+    },
     "network": {
         // "interface": "wlp2s0", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-wifi": "{signalStrength}% ",
         "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
         "format-disconnected": "Disconnected ⚠"
     },
