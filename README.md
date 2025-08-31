@@ -3,6 +3,31 @@
 This repository contains my personal dotfiles.
 Please use at your own risk. 
 
+## What are dotfiles?
+
+In Linux you'll find that people use filenames and directories starting with a
+dot, like `.config` and `.wezterm`. These files and directories are
+automatically hidden by file explorers, etc. Often these file contain
+configuration information for various tools.
+
+Many tools on Linux use the `/home/<user>/.config` folder to store user
+specific configuration information. You may or may not have heard about this
+directory depending on how you use Linux.
+
+There's a practice on Linux called ricing, which involves customizing the
+configuration of your Linux environment to a high degree. For example, some
+people prefer to use a window manager like [hyprland](https://hypr.land)
+which requires a lot of configuration but can be made exactly like how you
+prefer your computer to behave and look.
+
+I'm one of those people that likes to customize their desktop environment. I do
+this for aesthetic reasons and because I want to use my mouse as little as
+possible because my hand coordination isn't crazy good.
+
+To help me keep a backup of things, I created this repository. You can use
+these files too, but you'll have to tweak them, because I included some
+environment-specific information in the config files.
+
 ## System Requirements
 
 These dotfiles were created for my Arch Linux installation. You can use these
