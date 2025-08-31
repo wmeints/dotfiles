@@ -8,6 +8,11 @@
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
+# Allow me to correct my commands that I frequently mistype
+eval $(thefuck --alias)
+eval $(thefuck --alias crap)
+
+# Custom prompt that is pretty :-)
 eval -- "$(/usr/bin/starship init bash --print-full-init)"
 
 # Enable Java tools

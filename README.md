@@ -39,6 +39,7 @@ Please make sure to have the following tools installed on your system:
 - [Waybar](https://github.com/Alexays/Waybar)
 - [Hyprland](https://hypr.land/)
 - [Stow](https://www.gnu.org/software/stow/)
+- [Thefuck](https://github.com/nvbn/thefuck)
 
 ## Getting started
 
