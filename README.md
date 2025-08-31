@@ -51,6 +51,7 @@ stow wofi
 stow waybar
 stow hyprland
 stow scripts
+stow starship
 ```
 
 ## Documentation
@@ -71,3 +72,4 @@ I included configuration for the following tools:
 - Waybar : The statusbar I use in the Hyprland environment.
 - Wofi : The menu tool I use for the power menu and application launcher.
 - Bash : The shell I use when doing things in the terminal.
+- Starship : The custom prompt configuration I use for my shell.
