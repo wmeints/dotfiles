@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-style="/home/wmeints/.config/wofi/src/mocha/style.css"
+style="$HOME/.config/wofi/style.css"
 entries=" Shutdown\n Reboot\n Suspend\n Logout"
 
 selected=$(echo -e "$entries" | wofi --dmenu --cache-file=/dev/null --prompt "Power" --style "${style}")
