@@ -40,6 +40,7 @@ Please make sure to have the following tools installed on your system:
 - [Hyprland](https://hypr.land/)
 - [Stow](https://www.gnu.org/software/stow/)
 - [Thefuck](https://github.com/nvbn/thefuck)
+- [Wezterm](https://wezterm.org/)
 
 ## Getting started
 
@@ -52,6 +53,7 @@ stow waybar
 stow hyprland
 stow scripts
 stow starship
+stow wezterm
 ```
 
 ## Documentation
