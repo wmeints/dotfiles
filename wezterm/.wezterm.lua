@@ -13,7 +13,7 @@ config.initial_rows = 28
 
 -- Font settings
 config.font = wezterm.font("MonaspiceAR NF")
-config.font_size = 13
+config.font_size = 15
 
 -- Window decoration
 config.window_decorations = "RESIZE"
