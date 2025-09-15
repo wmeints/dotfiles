@@ -15,9 +15,6 @@ config.initial_rows = 28
 config.font = wezterm.font("MonaspiceAR NF")
 config.font_size = 15
 
--- Window decoration
-config.window_decorations = "RESIZE"
-
 -- Custom keybindings
 
 local action = wezterm.action
