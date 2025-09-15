@@ -1,7 +1,7 @@
 # Personal dotfiles
 
 This repository contains my personal dotfiles.
-Please use at your own risk. 
+Please use at your own risk.
 
 ## What are dotfiles?
 
@@ -55,6 +55,9 @@ stow scripts
 stow starship
 stow wezterm
 ```
+
+Important: You should use `stow zsh` instead of `stow bash` if you're using
+zsh as your shell.
 
 ## Documentation
 
