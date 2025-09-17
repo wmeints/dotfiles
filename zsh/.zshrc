@@ -38,7 +38,3 @@ export PATH="$PATH:/home/wmeints/.dotnet/tools"
 # =============================================================================== 
 export PATH="$PATH:$(go env GOBIN):$(go env GOPATH)/bin"
 . "$HOME/.cargo/env"
-
-# Autocompletion script for git commands.
-# =============================================================================== 
-source ~/.git-completion.sh
