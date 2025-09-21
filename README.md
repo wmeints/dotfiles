@@ -41,6 +41,9 @@ Please make sure to have the following tools installed on your system:
 - [Stow](https://www.gnu.org/software/stow/)
 - [Thefuck](https://github.com/nvbn/thefuck)
 - [Wezterm](https://wezterm.org/)
+- [Eza](https://github.com/eza-community/eza)
+- [fzf](https://github.com/junegunn/fzf)
+- [Zoxide](https://github.com/ajeetdsouza/zoxide)
 
 ## Getting started
 
