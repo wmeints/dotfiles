@@ -18,6 +18,18 @@ eval "$(zoxide init zsh)"
 
 alias ls='eza -alf --color=always --sort=size | grep -v /'
 
+# Create a widget function for lazygit
+lazygit-widget() {
+  lazygit
+  zle reset-prompt
+}
+
+# Register the function as a zle widget
+zle -N lazygit-widget
+
+# Bind space+gg to the widget
+bindkey ' gg' lazygit-widget
+
 # Allow me to correct my commands that I frequently mistype
 # =============================================================================== 
 eval $(thefuck --alias)
@@ -59,3 +71,4 @@ export PATH="$PATH:$(go env GOBIN):$(go env GOPATH)/bin"
 if [ -f /etc/profile.d/rvm.sh ]; then
   source /etc/profile.d/rvm.sh
 fi
+
