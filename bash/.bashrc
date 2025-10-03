@@ -3,6 +3,8 @@
 
 # Configure essentials
 # ==============================================================================
+export PATH="~/.cargo/bin:$PATH"
+
 eval "$(zoxide init bash)"
 
 alias ls='eza -G --icons=auto'
@@ -15,7 +17,7 @@ eval $(thefuck --alias crap)
 
 # Custom prompt that is pretty :-)
 # ============================================================================== 
-eval -- "$(/usr/bin/starship init bash)"
+eval -- "$(starship init bash)"
 
 # Enable Java tools
 # ============================================================================== 
