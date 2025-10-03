@@ -5,11 +5,6 @@
 # ==============================================================================
 export PATH="~/.cargo/bin:$PATH"
 
-eval "$(zoxide init bash)"
-
-alias ls='eza -G --icons=auto'
-alias cd='z'
-
 # Allow me to correct my commands that I frequently mistype
 # ============================================================================== 
 eval $(thefuck --alias)
@@ -52,4 +47,16 @@ export PATH="$PATH:$(go env GOBIN):$(go env GOPATH)/bin"
 export PODMAN_COMPOSE_WARNING_LOGS=false
 export DOCKER_HOST=unix:///run/user/${UID}/podman/podman.socket
 export TESTCONTAINERS_RYUK_DISABLED=true
+
+# Configure SDKMan
+# ==============================================================================
+source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# Enable shell tools
+# ==============================================================================
+alias ls='eza -G --icons=auto'
+alias cd='z'
+
+eval "$(zoxide init bash)"
+
 
