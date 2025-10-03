@@ -107,6 +107,24 @@
       args:
         creates: ~/.sdkman/bin/sdkman-init.sh
         executable: /bin/bash
+    - name: Install Proton Pass
+      become: yes
+      shell: |
+        wget -O /tmp/protonpass.rpm "https://proton.me/download/PassDesktop/linux/x64/ProtonPass.rpm"
+        dnf install -y /tmp/protonpass.rpm
+        rm /tmp/protonpass.rpm
+      args:
+        creates: /usr/bin/proton-pass
+        executable: /bin/bash
+    - name: Install Proton Mail
+      become: yes
+      shell: |
+        wget -O /tmp/protonmail.rpm "https://proton.me/download/mail/linux/x64/ProtonMail.rpm"
+        dnf install -y /tmp/protonmail.rpm
+        rm /tmp/protonmail.rpm
+      args:
+        creates: /usr/bin/proton-mail
+        executable: /bin/bash
     - name: Create desktop entry for IntelliJ IDEA
       become: yes
       copy:
