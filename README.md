@@ -15,18 +15,15 @@ specific configuration information. You may or may not have heard about this
 directory depending on how you use Linux.
 
 There's a practice on Linux called ricing, which involves customizing the
-configuration of your Linux environment to a high degree. For example, some
-people prefer to use a window manager like [hyprland](https://hypr.land)
-which requires a lot of configuration but can be made exactly like how you
-prefer your computer to behave and look.
+configuration of your Linux environment so much that it doesn't look like the
+standard configuration anymore.
 
-I'm one of those people that likes to customize their desktop environment. I do
-this for aesthetic reasons and because I want to use my mouse as little as
-possible because my hand coordination isn't crazy good.
+I'm going back and forth between heavily customized environments and more
+standard ones. I currently run Fedora Linux because it's very stable and comes
+with a lot of stuff included that I like to use.
 
-To help me keep a backup of things, I created this repository. You can use
-these files too, but you'll have to tweak them, because I included some
-environment-specific information in the config files.
+I do have some extra packages and tool installed, that require extra
+configuration. You can find all of these here in this repository.
 
 ## System Requirements
 
@@ -35,9 +32,6 @@ with other distributions, but I haven't tested them.
 
 Please make sure to have the following tools installed on your system:
 
-- [Wofi](https://github.com/SimplyCEO/wofi)
-- [Waybar](https://github.com/Alexays/Waybar)
-- [Hyprland](https://hypr.land/)
 - [Stow](https://www.gnu.org/software/stow/)
 - [Thefuck](https://github.com/nvbn/thefuck)
 - [Wezterm](https://wezterm.org/)
@@ -45,18 +39,22 @@ Please make sure to have the following tools installed on your system:
 - [fzf](https://github.com/junegunn/fzf)
 - [Zoxide](https://github.com/ajeetdsouza/zoxide)
 
+You can install these packages using the provided ansible playbook. Make sure
+you install Ansible first, and then run the command
+
+```bash
+ansible-playbook -K ansible/post-install.yaml
+```
+
 ## Getting started
 
 Clone this repository to your machine. Use the following commands from the
 repository root to link the configuration files into the correct locations.
 
 ```shell
-stow wofi
-stow waybar
-stow hyprland
-stow scripts
 stow starship
 stow wezterm
+stow bash
 ```
 
 Important: You should use `stow zsh` instead of `stow bash` if you're using
