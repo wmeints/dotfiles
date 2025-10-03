@@ -107,3 +107,51 @@
       args:
         creates: ~/.sdkman/bin/sdkman-init.sh
         executable: /bin/bash
+    - name: Create desktop entry for IntelliJ IDEA
+      become: yes
+      copy:
+        dest: /usr/share/applications/jetbrains-idea.desktop
+        content: |
+          [Desktop Entry]
+          Version=1.0
+          Type=Application
+          Name=IntelliJ IDEA Ultimate
+          Icon=/opt/idea/bin/idea.svg
+          Exec=/opt/idea/bin/idea %f
+          Comment=Capable and Ergonomic IDE for JVM
+          Categories=Development;IDE;
+          Terminal=false
+          StartupWMClass=jetbrains-idea
+          StartupNotify=true
+    - name: Create desktop entry for Rider
+      become: yes
+      copy:
+        dest: /usr/share/applications/jetbrains-rider.desktop
+        content: |
+          [Desktop Entry]
+          Version=1.0
+          Type=Application
+          Name=Rider
+          Icon=/opt/rider/bin/rider.svg
+          Exec=/opt/rider/bin/rider %f
+          Comment=Fast & powerful cross-platform .NET IDE
+          Categories=Development;IDE;
+          Terminal=false
+          StartupWMClass=jetbrains-rider
+          StartupNotify=true
+    - name: Create desktop entry for RustRover
+      become: yes
+      copy:
+        dest: /usr/share/applications/jetbrains-rustrover.desktop
+        content: |
+          [Desktop Entry]
+          Version=1.0
+          Type=Application
+          Name=RustRover
+          Icon=/opt/rustrover/bin/rustrover.svg
+          Exec=/opt/rustrover/bin/rustrover %f
+          Comment=Rust IDE by JetBrains
+          Categories=Development;IDE;
+          Terminal=false
+          StartupWMClass=jetbrains-rustrover
+          StartupNotify=true
