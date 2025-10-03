@@ -4,6 +4,7 @@
 # Configure essentials
 # ==============================================================================
 export PATH="~/.cargo/bin:$PATH"
+export PATH="/usr/local/go/bin:$PATH"
 
 # Allow me to correct my commands that I frequently mistype
 # ============================================================================== 
