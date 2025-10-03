@@ -1,32 +1,33 @@
-#
-# ~/.bashrc
-#
-
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='ls --color=auto'
-alias grep='grep --color=auto'
+# Configure essentials
+# ==============================================================================
+eval "$(zoxide init bash)"
+
+alias ls='eza -G --icons=auto'
+alias cd='z'
 
 # Allow me to correct my commands that I frequently mistype
-# =============================================================================== 
+# ============================================================================== 
 eval $(thefuck --alias)
 eval $(thefuck --alias crap)
 
 # Custom prompt that is pretty :-)
-# =============================================================================== 
-eval -- "$(/usr/bin/starship init bash --print-full-init)"
+# ============================================================================== 
+eval -- "$(/usr/bin/starship init bash)"
 
 # Enable Java tools
-# =============================================================================== 
+# ============================================================================== 
 export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && \
+source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 # Enable Node tools
-# =============================================================================== 
+# ============================================================================== 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 export PNPM_HOME="/home/wmeints/.local/share/pnpm"
 case ":$PATH:" in
@@ -35,12 +36,18 @@ case ":$PATH:" in
 esac
 
 # Enable .NET tools
-# =============================================================================== 
+# ==============================================================================
 export PATH="$HOME/.aspire/bin:$PATH"
 export PATH="$PATH:/home/wmeints/.dotnet/tools"
 
 # Enable Go tools
-# =============================================================================== 
+# ============================================================================== 
 export PATH="$PATH:$(go env GOBIN):$(go env GOPATH)/bin"
 . "$HOME/.cargo/env"
+
+# Configure Docker for Quarkus
+# ==============================================================================
+export PODMAN_COMPOSE_WARNING_LOGS=false
+export DOCKER_HOST=unix:///run/user/${UID}/podman/podman.socket
+export TESTCONTAINERS_RYUK_DISABLED=true
 
