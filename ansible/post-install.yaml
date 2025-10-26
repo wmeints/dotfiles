@@ -16,6 +16,7 @@
           - podman-docker
           - hyprland
           - rofi
+          - waybar
         state: present
     - name: Install rustup
       shell: |
