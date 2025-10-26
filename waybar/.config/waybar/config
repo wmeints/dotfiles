@@ -1,0 +1,29 @@
+{
+  "layer": "top",
+  "position": "top",
+  "spacing": 0,
+  "margin-bottom": -10,
+  "modules-left": [
+    "hyprland/workspaces",
+    "cpu"
+  ],
+  "modules-center": [
+    "clock"
+  ],
+  "modules-right": [
+    "network",
+    "bluetooth",
+    "pulseaudio",
+    "custom/power"
+  ],
+  "network": {
+    "format-wifi": "{icon} {signalStrength}%",
+    "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+    "tooltip-format": "{essid} ({signalStrength}%)"
+  },
+  "custom/power": {
+    "format": "⏻",
+    "on-click": "~/.local/bin/power-menu.sh",
+    "tooltip": false
+  }
+}
