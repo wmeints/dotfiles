@@ -17,6 +17,7 @@
           - hyprland
           - rofi
           - waybar
+          - dbus-devel
         state: present
     - name: Install rustup
       shell: |
@@ -43,10 +44,11 @@
         - ~/.cargo/bin/eza
         - ~/.cargo/bin/starship
         - ~/.cargo/bin/zellij
+        - ~/.cargo/bin/bluetui
     - name: Install rust-based packages
       shell: |
         source ~/.cargo/env
-        cargo install eza starship zellij
+        cargo install eza starship zellij bluetui
       args:
         executable: /bin/bash
       when: rust_tools.results | selectattr('stat.exists', 'equalto', false) | list | length > 0
