@@ -19,7 +19,8 @@
   "network": {
     "format-wifi": "{icon} {signalStrength}%",
     "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
-    "tooltip-format": "{essid} ({signalStrength}%)"
+    "tooltip-format": "{essid} ({signalStrength}%)",
+    "on-click": "kitty -e impala"
   },
   "bluetooth": {
     "on-click": "kitty -e bluetui"

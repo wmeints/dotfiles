@@ -45,10 +45,11 @@
         - ~/.cargo/bin/starship
         - ~/.cargo/bin/zellij
         - ~/.cargo/bin/bluetui
+        - ~/.cargo/bin/impala
     - name: Install rust-based packages
       shell: |
         source ~/.cargo/env
-        cargo install eza starship zellij bluetui
+        cargo install eza starship zellij bluetui impala
       args:
         executable: /bin/bash
       when: rust_tools.results | selectattr('stat.exists', 'equalto', false) | list | length > 0
