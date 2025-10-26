@@ -1,0 +1,53 @@
+* {
+    font: "CaskaydiaMono Nerd Font 13";
+    background-color: #1a1b26;
+    text-color: #c6d0f5;
+    border-color: #99d1db;
+}
+
+window {
+    width: 600px;
+    padding: 10px;
+    border: 2px;
+    border-radius: 6px;
+}
+
+listview {
+    lines: 8;
+    spacing: 5px;
+}
+
+element {
+    padding: 10px;
+    background-color: #1a1b26;
+}
+
+element selected {
+    background-color: rgba(153, 209, 219, 0.1);
+    border-color: rgba(153, 209, 219, 0.1);
+    text-color: #99d1db;
+}
+
+element-text {
+    background-color: inherit;
+    text-color: inherit;
+}
+
+element-icon {
+    size: 1.5em;
+    background-color: inherit;
+    margin: 0 10px 0 0;
+}
+
+inputbar {
+    padding: 10px;
+    spacing: 10px;
+}
+
+prompt {
+    text-color: #99d1db;
+}
+
+entry {
+    text-color: #c6d0f5;
+}
