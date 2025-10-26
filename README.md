@@ -19,11 +19,12 @@ configuration of your Linux environment so much that it doesn't look like the
 standard configuration anymore.
 
 I'm going back and forth between heavily customized environments and more
-standard ones. I currently run Fedora Linux because it's very stable and comes
-with a lot of stuff included that I like to use.
+standard ones. I currently run Arch Linux because it's nice and compact and comes
+with a lot of stuff available through easy-to-use packages that I like to use.
 
-I do have some extra packages and tool installed, that require extra
-configuration. You can find all of these here in this repository.
+My desktop environment is hyprland which I styled to look minimalistic. I
+have a lot of stuff running as a terminal UI. There are some pretty awesome
+terminal tools out there that are very efficient to use.
 
 ## System Requirements
 
@@ -38,13 +39,18 @@ Please make sure to have the following tools installed on your system:
 - [Eza](https://github.com/eza-community/eza)
 - [fzf](https://github.com/junegunn/fzf)
 - [Zoxide](https://github.com/ajeetdsouza/zoxide)
+- [Bluetui](https://github.com/pythops/bluetui)
+- [Impala](https://terminaltrove.com/impala/)
+- [BTop](https://github.com/aristocratos/btop)
+- [Nautilus](https://apps.gnome.org/Nautilus/)
 
-You can install these packages using the provided ansible playbook. Make sure
-you install Ansible first, and then run the command
+You can install many of these packages through the AUR repository or
+the official packages provided in Arch Linux.
 
-```bash
-ansible-playbook -K ansible/post-install.yaml
-```
+Make sure to get the necessary Nerd Fonts through the official website:
+
+- [CaskaydiaCove Nerd Font](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/CascadiaCode.zip)
+- [Monaspice Nerd Font](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Monaspace.zip)
 
 ## Getting started
 
@@ -52,13 +58,12 @@ Clone this repository to your machine. Use the following commands from the
 repository root to link the configuration files into the correct locations.
 
 ```shell
-stow starship
-stow wezterm
-stow bash
+stow -R starship
+stow -R bash
+stow -R kitty
+stow -R waybar
+stow -R hyprland
 ```
-
-Important: You should use `stow zsh` instead of `stow bash` if you're using
-zsh as your shell.
 
 ## Documentation
 
@@ -79,3 +84,4 @@ I included configuration for the following tools:
 - Wofi : The menu tool I use for the power menu and application launcher.
 - Bash : The shell I use when doing things in the terminal.
 - Starship : The custom prompt configuration I use for my shell.
+- Nautilus : The file browser utility that I use.
