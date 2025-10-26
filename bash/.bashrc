@@ -64,8 +64,5 @@ alias cd='z'
 
 eval "$(zoxide init bash)"
 
-
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-
 eval "$(direnv hook bash)"
 export PATH=$HOME/.local/bin:$PATH
