@@ -21,6 +21,9 @@
     "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
     "tooltip-format": "{essid} ({signalStrength}%)"
   },
+  "bluetooth": {
+    "on-click": "kitty -e bluetui"
+  },
   "custom/power": {
     "format": "⏻",
     "on-click": "~/.local/bin/power-menu.sh",
