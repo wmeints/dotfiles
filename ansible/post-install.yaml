@@ -18,6 +18,7 @@
           - rofi
           - waybar
           - dbus-devel
+          - dunst
         state: present
     - name: Install rustup
       shell: |
