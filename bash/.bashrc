@@ -5,6 +5,10 @@
 # ==============================================================================
 export PATH="~/.cargo/bin:$PATH"
 export PATH="/usr/local/go/bin:$PATH"
+export PATH="$HOME/.dotnet:$PATH"
+export PATH="$HOME/.dotnet/tools:$PATH"
+
+export DOTNET_ROOT="$HOME/.dotnet"
 
 # Allow me to correct my commands that I frequently mistype
 # ============================================================================== 
@@ -61,3 +65,7 @@ alias cd='z'
 eval "$(zoxide init bash)"
 
 
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+eval "$(direnv hook bash)"
+export PATH=$HOME/.local/bin:$PATH
