@@ -5,7 +5,7 @@
     - name: Install packages
       become: yes
       package:
-        name: 
+        name:
           - btop
           - stow
           - git
@@ -14,6 +14,8 @@
           - ripgrep
           - thefuck
           - podman-docker
+          - hyprland
+          - rofi
         state: present
     - name: Install rustup
       shell: |
