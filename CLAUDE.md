@@ -5,6 +5,7 @@ Please review these instructions to understand how the configuration works.
 
 ## Structure of the configuration
 
+- `ansible` - Contains the packages and applications I use most frequently
 - `bash` - Contains the bash profile script I use for my shell.
 - `hyprland` - Contains the configuration for my window manager hyprland.
 - `starship` - Contains the configuration for the custom prompt in my shell.
