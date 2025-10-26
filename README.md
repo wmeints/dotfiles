@@ -1,5 +1,7 @@
 # Personal dotfiles
 
+![Wallpaper](./images/screenshot.png)
+
 This repository contains my personal dotfiles.
 Please use at your own risk.
 
