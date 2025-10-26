@@ -8,13 +8,14 @@ Please use at your own risk.
 ## What are dotfiles?
 
 In Linux you'll find that people use filenames and directories starting with a
-dot, like `.config` and `.wezterm`. These files and directories are
-automatically hidden by file explorers, etc. Often these file contain
-configuration information for various tools.
+dot, like `.config`. These files and directories are automatically hidden by
+file explorers, etc. Often these file contain configuration information for
+various tools.
 
 Many tools on Linux use the `/home/<user>/.config` folder to store user
 specific configuration information. You may or may not have heard about this
-directory depending on how you use Linux.
+directory depending on how you use Linux. The idea for using the `.config`
+directory comes from [XDG Base Directory Specification](https://specifications.freedesktop.org/basedir-spec/latest/).
 
 There's a practice on Linux called ricing, which involves customizing the
 configuration of your Linux environment so much that it doesn't look like the
