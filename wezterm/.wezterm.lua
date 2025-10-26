@@ -30,6 +30,11 @@ config.keys = {
 		mods = "SHIFT|ALT",
 		action = action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
 	},
+	{
+		key = "Enter",
+		mods = "SHIFT",
+		action = wezterm.action({ SendString = "\x1b\r" }),
+	},
 }
 
 return config
