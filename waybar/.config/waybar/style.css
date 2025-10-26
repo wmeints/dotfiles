@@ -72,6 +72,7 @@
 
 #pulseaudio,
 #network,
+#memory,
 #custom-power,
 #bluetooth {
 	padding: 0.3rem 0.7rem;
@@ -86,6 +87,7 @@
 #bluetooth:hover,
 #custom-power:hover,
 #network:hover,
+#memory:hover,
 #pulseaudio:hover {
 	background-color: rgba(41, 42, 53, 1);
 }
