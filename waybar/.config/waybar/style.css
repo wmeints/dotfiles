@@ -93,9 +93,13 @@
 }
 
 #bluetooth,
-#custom-power,
 #pulseaudio {
 	margin-right: 7px;
+}
+
+#custom-power {
+	padding: 1rem;
+	margin-right: 14px;
 }
 
 #network {
