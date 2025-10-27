@@ -57,8 +57,16 @@ Make sure to get the necessary Nerd Fonts through the official website:
 
 ## Getting started
 
-Clone this repository to your machine. Use the following commands from the
-repository root to link the configuration files into the correct locations.
+Clone this repository to your machine. Then run the following command to 
+install the required packages using ansible:
+
+```shell
+sudo pacman -S ansible
+ansible-playbook -K ansible/post-install.yml
+```
+
+Use the following commands from the repository root to link the configuration
+files into the correct locations.
 
 ```shell
 stow -R starship
