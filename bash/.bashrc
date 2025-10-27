@@ -1,5 +1,10 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
+#
+# Use gnome-keyring for SSH
+if [ -n "$DESKTOP_SESSION" ]; then
+    export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/gcr/ssh"
+fi
 
 # Configure essentials
 # ==============================================================================
