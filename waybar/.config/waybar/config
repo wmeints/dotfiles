@@ -35,6 +35,9 @@
   "bluetooth": {
     "on-click": "kitty -e bluetui"
   },
+  "pulseaudio": {
+    "on-click": "pavucontrol"
+  },
   "custom/power": {
     "format": "⏻",
     "on-click": "~/.local/bin/power-menu.sh",

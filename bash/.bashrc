@@ -71,3 +71,5 @@ eval "$(zoxide init bash)"
 
 eval "$(direnv hook bash)"
 export PATH=$HOME/.local/bin:$PATH
+
+[[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path bash)"
