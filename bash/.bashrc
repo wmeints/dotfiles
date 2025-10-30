@@ -52,12 +52,6 @@ export PATH="$PATH:/home/wmeints/.dotnet/tools"
 export PATH="$PATH:$(go env GOBIN):$(go env GOPATH)/bin"
 . "$HOME/.cargo/env"
 
-# Configure Docker for Quarkus
-# ==============================================================================
-export PODMAN_COMPOSE_WARNING_LOGS=false
-export DOCKER_HOST=unix:///run/user/${UID}/podman/podman.socket
-export TESTCONTAINERS_RYUK_DISABLED=true
-
 # Configure SDKMan
 # ==============================================================================
 source "$HOME/.sdkman/bin/sdkman-init.sh"
