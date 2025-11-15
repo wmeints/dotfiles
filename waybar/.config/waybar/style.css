@@ -74,6 +74,7 @@
 #network,
 #memory,
 #custom-power,
+#custom-updates,
 #bluetooth {
 	padding: 0.3rem 0.7rem;
 	margin: 5px 0px;
@@ -108,5 +109,9 @@
 }
 
 #custom-power {
+	padding: 0.7rem 0.7rem;
+}
+
+#custom-updates {
 	padding: 0.7rem 0.7rem;
 }

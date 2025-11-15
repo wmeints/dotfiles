@@ -15,6 +15,7 @@
     "network",
     "bluetooth",
     "pulseaudio",
+    "custom/updates",
     "custom/power"
   ],
   "cpu": {
@@ -42,5 +43,15 @@
     "format": "⏻",
     "on-click": "~/.local/bin/power-menu.sh",
     "tooltip": false
+  },
+  "custom/updates": {
+      "format": "{} {icon}",
+      "return-type": "json",
+      "format-icons": {
+          "has-updates": "󱍷",
+          "updated": "󰂪"
+      },
+      "on-click": "kitty -e ~/.local/bin/apply-updates.sh",
+      "exec": "waybar-module-pacman-updates --interval-seconds 5 --network-interval-seconds 300"
   }
 }
